@@ -1,0 +1,22 @@
+<header>
+    <div id="header-overnav">
+        <a href="">Mapa del Sitio</a>
+        <a href="">Contáctanos</a>
+        <a href="">Sucursales</a>
+        <a href="">Mi Cuenta</a>
+    </div>
+    <nav id="header-nav">
+        <a id="header-nav-logo" href="/Main">
+            <img src="assets/images/icons/LogoLarge.png">
+        </a>
+        <div id="header-search-container">
+            <select id="header-sch-container-list" [(ngModel)]="search.category">
+                <option value="all">-- Todos --</option>
+            </select>
+            <input id="header-sch-container-input" [(ngModel)]="search.factor" placeholder="Buscar..." (keyup)="checkKeyUp($event)" />
+            <button id="header-sch-container-button" title="Buscar" (click)="searchFactor()">
+                <img src="assets/images/icons/search.png">
+            </button>
+        </div>
+    </nav>
+</header>

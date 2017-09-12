@@ -1,0 +1,82 @@
+footer {
+    background-color: #333;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+footer a {
+    color: #FFF;
+}
+#footer-logo {
+    padding: 17px 30px;
+    position: absolute;
+    width: 170px;
+    height: 215px;
+    text-align: center;
+}
+#footer-logo img {
+    width: 100%;
+}
+
+#footer-links {
+    margin: 0 35%;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    font-family: Roboto;
+    text-align: center;
+}
+#footer-links-socialnet {
+    height: 100px;
+    text-align: center;
+}
+#footer-links-socialnet a {
+    display: inline-block;
+    padding: 40px 5px;
+    width: 30px;
+    height: 30px;
+}
+#footer-links-socialnet a img {
+    width: 30px;
+    height: 30px;
+}
+#footer-links-site {
+    font-size: 1.2em;
+}
+#footer-links-site a {
+    display: block;
+    padding: 0.3em 0;
+}
+#footer-links-site a:hover,
+#footer-links-site a:focus {
+    color: #CCC;
+}
+#footer-copyright {
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 0.8em;
+}
+
+#footer-info {
+    box-sizing: border-box;
+    right: 0px;
+    padding: 35px 0;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 1.1em;
+    text-align: center;
+}
+#footer-info-title {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+#footer-info-phone,
+#footer-info-email,
+#footer-info-address {
+    padding: 5px 0;
+    width: 100%;
+}

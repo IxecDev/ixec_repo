@@ -1,0 +1,275 @@
+* {
+    -webkit-transition: width, height 500ms ease;
+    -moz-transition: width, height 500ms ease;
+    -ms-transition: width, height 500ms ease;
+    -o-transition: width, height 500ms ease;
+    transition: width, height 500ms ease;
+}
+main {
+    width: 100%;
+}
+#site-content {
+    margin: 30px auto;
+    position: relative;
+    width: 1000px;
+    height: auto;
+}
+
+#main-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+#carousel-item-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.carousel-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+.carousel-info {
+    background-color: rgba(50, 50, 50, 0.7);
+    top: -50px;
+    left: -180px;
+    border-radius: 300px;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    z-index: 50;
+}
+.carousel-info-item {
+    top: 50px;
+    left: 180px;
+    position: absolute;
+    overflow: hidden;
+    width: 420px;
+    height: 300px;
+}
+.carousel-info-title {
+    top: 5px;
+    left: 20px;
+    position: absolute;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 4.5em;
+}
+.carousel-info-description {
+    top: 180px;
+    left: 100px;
+    position: absolute;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 2em;
+}
+.carousel-info-comments {
+    left: 20px;
+    bottom: 10px;
+    position: absolute;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 0.9em;
+}
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+.carousel-image img {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+}
+#carousel-buttons {
+    cursor: pointer;
+    box-sizing: border-box;
+    bottom: 0;
+    padding: 10px 30px;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    z-index: 40;
+    text-align: right;
+}
+.carousel-button {
+    background-color: #333;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 3px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+.carousel-button.active {
+    background-color: #C64B4B;
+}
+
+
+#main-promos {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+}
+.main-promo {
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+#main-promos .main-promo:nth-child(2) {
+    margin: 0 5%;
+}
+.main-promo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.main-promo div {
+    background-color: rgba(50, 50, 50, 0.4);
+    box-sizing: border-box;
+    bottom: 0;
+    padding: 5px 10px;
+    position: absolute;
+    width: 100%;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 1.5em;
+    height: 65px;
+}
+
+#main-products {
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+}
+#main-products > div {
+    box-sizing: border-box;
+}
+#main-product-list {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+#main-product-ad {
+    float: left;
+    margin-left: 5%;
+    width: 35%;
+    height: 100%;
+}
+#main-product-ad img {
+    width: 100%;
+    height: 100%;
+}
+.product {
+    float: left;
+    position: relative;
+    width: 28%;
+    font-family: Roboto;
+}
+.product:nth-child(3n-1) {
+    margin: 0 8%;
+}
+.product:nth-child(n+4) {
+    margin-top: 20px;
+}
+.product:nth-child(n+7) {
+    display: none;
+}
+.product-image {
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    position: relative;
+    height: 150px;
+    text-align: center;
+}
+.product-image img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+.product-price {
+    background-color: #FBA980;
+    right: 5px;
+    bottom: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    font-family: Roboto;
+    font-size: 1.1em;
+}
+.product-price-symbol {
+    font-size: 0.6em;
+}
+.product-name {
+    margin: 0.2em 0;
+    font-family: RobotoBold;
+    font-size: 1.2em;
+}
+.main-promo-link {
+    cursor: pointer;
+}
+
+#main-categories {
+    box-sizing: border-box;
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+#main-categories:before {
+    content: " ";
+    display: block;
+    border-top: 1px solid #CCC;
+    margin: 0 10%;
+    position: absolute;
+    width: 80%;
+}
+.category {
+    box-sizing: border-box;
+    float: left;
+    padding: 20px 10px;
+    position: relative;
+    width: 16.66%;
+    height: 100%;
+    font-family: Roboto;
+}
+.category-name {
+    font-family: RobotoBold;
+}
+.category-list {
+    padding: 0;
+}
+.category-list li {
+    list-style: none;
+    margin: 5px 0;
+    margin-left: 10px;
+}
+.category-list li a {
+    color: #333;
+}
+.category-list li a:hover {
+    color: #999;
+}
+
+@media screen and (min-width: 1920px) {
+    #site-content { width: 1500px; }
+    #main-carousel { height: 500px; }
+    #carousel-info { border-radius: 400px; left: -200px; width: 800px; height: 800px; }
+    .carousel-info-item { left: 200px; width: 600px; height: 500px; }
+    .carousel-info-title { font-size: 7em; }
+    .carousel-info-description { top: 280px; font-size: 3.5em; }
+    .carousel-info-comments { bottom: 20px; font-size: 1.3em; }
+    #carousel-images img { height: 500px; }
+    #main-promos { height: 300px; }
+    #main-products { height: 800px; }
+    .product-image { height: 170px; }
+    .product:nth-child(n+7) { display: block; }
+}

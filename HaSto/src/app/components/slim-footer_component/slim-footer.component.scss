@@ -1,0 +1,58 @@
+footer {
+    background: transparent no-repeat 1% center url('../../../assets/images/icons/LogoNoBg.png');
+    background-size: 24px;
+    box-sizing: border-box;
+    padding: 0 3%;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-family: Roboto;
+}
+footer a {
+    cursor: pointer;
+}
+
+.footer-links {
+    box-sizing: border-box;
+    float: left;
+    padding: 0px 10px;
+    position: relative;
+    //width: 50%;
+    height: 40px;
+}
+.footer-links a {
+    box-sizing: border-box;
+    float: left;
+    display: block;
+    padding: 8px 10px;
+    width: auto;
+    height: 40px;
+    color: #333;
+}
+.footer-links a:hover {
+    color: #666;
+}
+.footer-copyright {
+    box-sizing: border-box;
+    float: left;
+    display: block;
+    padding: 8px 10px;
+    position: relative;
+    //width: 50%;
+    height: 40px;
+    color: #333;
+    text-align: right;
+}
+.footer-copyright a {
+    color: #333;
+}
+.footer-copyright a:hover {
+    color: #666;
+}
+
+@media screen and (max-width: 1024px) {
+    footer { overflow: hidden; height: auto; text-align: center !important; }
+    .footer-links { height: auto; }
+    .footer-links a { display: inline-block; float: none; }
+    .footer-copyright { height: auto; text-align: center; }
+}

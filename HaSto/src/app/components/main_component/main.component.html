@@ -1,0 +1,227 @@
+<site-header></site-header>
+
+<main>
+    <div id="site-content">
+
+        <div id="main-carousel">
+            <div id="carousel-item-container">
+                <div class="carousel-item" *ngFor="let item of carouselItems; let i=index">
+                    <div class="carousel-info">
+                        <div class="carousel-info-item">
+                            <div class="carousel-info-title">{{item.title}}</div>
+                            <div class="carousel-info-description">{{item.description}}</div>
+                            <div class="carousel-info-comments">{{item.comments}}</div>
+                        </div>
+                    </div>
+                    <div class="carousel-image">
+                        <img src="{{item.image}}">
+                    </div>
+                </div>
+            </div>
+            <div id="carousel-buttons">
+                <span class="carousel-button {{i === 0 ? 'active' : ''}}" *ngFor="let item of carouselItems; let i=index" (click)="switchCarouselClick(i)"></span>
+            </div>
+        </div>
+
+        <div id="main-promos">
+            <div class="main-promo">
+                <img src="assets/images/misc/disenio_banios.jpg">
+                <div class="main-promo-link">¡Decora tu baño ahora mismo!</div>
+            </div>
+            <div class="main-promo">
+                <img src="assets/images/misc/plomeria.jpeg">
+                <div class="main-promo-link">Tenemos Servicio Técnico de Plomería</div>
+            </div>
+            <div class="main-promo">
+                <img src="assets/images/misc/llantas.png">
+                <div class="main-promo-link">¡Llantas al 30% de descuento!</div>
+            </div>
+        </div>
+
+        <div id="main-products">
+            <div id="main-product-list">
+
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-image">
+                        <img src="assets/images/icons/picture.png">
+                        <div class="product-price"><span class="product-price-symbol">$</span>100.00</div>
+                    </div>
+                    <div class="product-name">
+                        Lorem ipsum dolor
+                    </div>
+                    <div class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </div>
+                </div>
+
+            </div>
+            <div id="main-product-ad">
+                <img src="assets/images/misc/ad.jpg">
+            </div>
+        </div>
+
+        <div id="main-categories">
+
+            <div class="category">
+                <div class="category-name">Limpieza</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="category-name">Pintura</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="category-name">Herramientas</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="category-name">Decoración</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="category-name">Electricidad</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="category-name">Plomería</div>
+                <ul class="category-list">
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                    <li><a href="/Main">Lorem ipsum dolor</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<site-footer></site-footer>
