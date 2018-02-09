@@ -1,0 +1,17 @@
+#!/bin/sh
+
+CC=g++
+BIN_DIR=../bin
+SRC_DIR=./
+
+INPUT_FILE=$1.cpp
+OUTPUT_FILE=$1.o
+MAKEFILE=Makefile
+
+echo $1: ${INPUT_FILE} > $MAKEFILE
+echo '\t' -rm ${OUTPUT_FILE} >> $MAKEFILE
+echo '\t' ${CC} ${INPUT_FILE} -o ${BIN_DIR}/${OUTPUT_FILE} >> $MAKEFILE
+echo '\t' chmod +x ${BIN_DIR}/${OUTPUT_FILE} >> $MAKEFILE
+echo '\t' clear >> $MAKEFILE
+echo '\t' ./${BIN_DIR}/${OUTPUT_FILE} >> $MAKEFILE
+make
