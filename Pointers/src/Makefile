@@ -1,6 +1,6 @@
-bit_operations2: bit_operations2.cpp
-	 -rm bit_operations2.o
-	 g++ bit_operations2.cpp -o ../bin/bit_operations2.o
-	 chmod +x ../bin/bit_operations2.o
+bit_operations3: bit_operations3.cpp
+	 -rm bit_operations3.o
+	 g++ bit_operations3.cpp -o ../bin/bit_operations3.o
+	 chmod +x ../bin/bit_operations3.o
 	 clear
-	 ./../bin/bit_operations2.o
+	 ./../bin/bit_operations3.o

@@ -1,0 +1,27 @@
+<div class="site-header">
+  <div class="header-content">
+    <div class="header-logo">
+      <img src="{{header_logo}}">
+    </div>
+    <div class="header-misc">
+      <div class="header-weather">
+        <span class="header-weather-temp">{{weatherTemperature}}°C</span>
+        <img class="header-weather-icon" src="{{weatherIcon}}">
+      </div>
+      <div class="header-social">
+        <a><img src="assets/img/ico_face.png"></a>
+        <a><img src="assets/img/ico_instagram.png"></a>
+        <a><img src="assets/img/ico_twitter.png"></a>
+        <a><img src="assets/img/ico_youtube.png"></a>
+      </div>
+      <div class="header-date">
+        {{currentDate}}
+      </div>
+      <div class="header-links">
+        <a href="" *ngIf="location !== 'esmeralda'">Esmeralda</a>
+        <a href="" *ngIf="location !== 'satelite'">Satélite</a>
+        <a href="" *ngIf="location !== 'queretaro'">Querétaro</a>
+      </div>
+    </div>
+  </div>
+</div>
