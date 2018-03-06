@@ -8,25 +8,25 @@
   </head>
   <body>
 
-    <div class="mainContainer">
+    <div class="main-container">
       <header class="col-xs-12">
         2CARS
       </header>
-      <div class="bodyMain col-xs-12">
-        <div id="gameBox">
-          <div id="gameMainMenu">
+      <div class="body-main col-xs-12">
+        <div id="game-box">
+          <div id="game-main-menu">
             <header>
               <div><strong>2</strong>CARS</div>
             </header>
             <section>
-              <div class="bigButtons">
-                <button type="button" id="playButton" title="Play"></button>
+              <div class="big-buttons">
+                <button type="button" id="play-button" title="Play"></button>
               </div>
-              <div class="miniButtons margintop">
-                <button type="button" id="statsButton" title="Statistics"></button>
-                <button type="button" id="downloadButton" title="Download"></button>
-                <button type="button" id="bgSoundButton" title="Background Sound"></button>
-                <button type="button" id="fxSoundButton" title="Effects Sound"></button>
+              <div class="mini-buttons margintop">
+                <button class="stats-button" type="button" title="Statistics"></button>
+                <button type="button" id="download-button" title="Download"></button>
+                <button type="button" id="bg-sound-button" title="Background Sound"></button>
+                <button type="button" id="fx-sound-button" title="Effects Sound"></button>
               </div>
               <div class="credits">
                 Fork by Erik Martínez<br>
@@ -34,27 +34,33 @@
               </div>
             </section>
           </div>
-          <div id="gamePauseMenu">
+          <div id="game-pause-menu">
             <section class="margin50">
-              <div class="miniButtons margintop">
-                <button type="button" id="statsButton" title="Statistics"></button>
-                <button type="button" id="playButton" title="Play"></button>
+              <div class="mini-buttons margintop">
+                <button class="stats-button" type="button" title="Statistics"></button>
+                <button type="button" id="resume-button" title="Resume"></button>
               </div>
             </section>
           </div>
-          <div id="gameEnv">
-            <button type="button" id="pauseButton" title="Pause"></button>
+          <div id="game-env">
+            <button type="button" id="pause-button" title="Pause"></button>
             <div id="score">0</div>
-            <div id="car_1"></div>
-            <div id="car_2"></div>
+            <div id="red-car"></div>
+            <div id="blue-car"></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- AUDIO LIST -->
+    <audio class="bg-audio" id="gaelic-audio" src="assets/audio/gaelic-earth.mp3" autoplay loop>
+      <div id="no-audio">Your device can't play audio</div>
+    </audio>
+
+    <audio id="tap-audio" src="assets/audio/tap-wooden.mp3"></audio>
+
     <!-- SCRIPT LIST -->
     <script src="assets/js/jItter.js"></script>
-    <!--<script src="assets/js/jItter.js"></script>-->
 
   </body>
 </html>

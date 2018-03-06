@@ -4,10 +4,10 @@
  *    CSS for game elements
  *
  *  @author
- *    Erik Martinez <erik.mj69@gmail.com>
+ *    Erik Martinez <erik12.ixec@gmail.com>
  *
  *  @license
- *    Copyright (C) 2016 Erik Martinez
+ *    Copyright (C) 2018 Erik Martinez
  *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
@@ -66,14 +66,14 @@ button {
   margin-top: 40px;
 }
 
-.mainContainer {
+.main-container {
   height: 100%;
 }
 
 
 /* 2. DESIGN
  * * * * * * */
-.mainContainer > header {
+.main-container > header {
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #C0C0C0;
   margin-top: -1%;
@@ -82,12 +82,12 @@ button {
   text-align: center;
 }
 
-.mainContainer > div {
+.main-container > div {
   background-color: #F0F0F0;
   height: 95%;
 }
 
-#gameBox {
+#game-box {
   background: #25337a no-repeat center center url(../images/Bg.svg);
   background-size: contain;
   border-left: 1px solid #0f1e48;
@@ -105,75 +105,75 @@ button {
   transition: width 2s ease;
 }
 
-#gameMainMenu, #gameEnv, #gamePauseMenu {
+#game-main-menu, #game-env, #game-pause-menu {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-#gameMainMenu, #gamePauseMenu {
+#game-main-menu, #game-pause-menu {
   background: rgba(30, 30, 30, 0.6);
   
   color: #FFF;
   font-family: 'Phenomena';
 }
 
-#gameMainMenu {
-  display: none;
+#game-main-menu {
+  display: block;
   z-index: 150;
 }
 
-#gamePauseMenu {
-  display: block;
+#game-pause-menu {
+  display: none;
   z-index: 140;
 }
 
-#gameMainMenu > header {
+#game-main-menu > header {
   margin-top: 30%;
   font-family: 'PhenomenaExtraLight';
   text-align: center;
 }
 
-#gameMainMenu > section,
-#gamePauseMenu > section {
+#game-main-menu > section,
+#game-pause-menu > section {
   text-align: center;
 }
 
-#gameMainMenu button,
-#gamePauseMenu button {
+#game-main-menu button,
+#game-pause-menu button {
   background: transparent no-repeat center center;
   background-size: contain;
   border: 2px solid #FFF;
   border-radius: 100%;
 }
 
-#gameMainMenu button:hover,
-#gamePauseMenu button:hover {
+#game-main-menu button:hover,
+#game-pause-menu button:hover {
   background-color: rgba(250, 250, 250, 0.1);
 }
 
-#gameMainMenu button:active,
-#gamePauseMenu button:active {
+#game-main-menu button:active,
+#game-pause-menu button:active {
   background-color: rgba(250, 250, 250, 0.2);
 }
 
-#playButton {
+#play-button, #resume-button {
   background-image: url(../images/play.svg) !important;
 }
 
-#statsButton {
+.stats-button {
   background-image: url(../images/stats.png) !important;
 }
 
-#downloadButton {
+#download-button {
   background-image: url(../images/star.svg) !important;
 }
 
-#bgSoundButton {
+#bg-sound-button {
   background-image: url(../images/sound-bg.svg) !important;
 }
 
-#fxSoundButton {
+#fx-sound-button {
   background-image: url(../images/sound-fx.svg) !important;
 }
 
@@ -181,16 +181,20 @@ button {
   font-family: 'PhenomenaExtraLight';
 }
 
-#gameEnv {
+#game-env {
   z-index: 50;
 }
 
-#pauseButton {
+#pause-button {
   background: transparent no-repeat center center url(../images/pause.png);
   background-size: contain;
   top: 5px;
   left: 5px;
   position: absolute;
+}
+
+#pause-button:active {
+  opacity: 0.6;
 }
 
 #score {
@@ -202,36 +206,40 @@ button {
   text-align: right;
 }
 
-#car_1, #car_2 {
+#red-car, #blue-car {
   background: transparent no-repeat center center;
   background-size: contain;
   bottom: 5%;
   position: absolute;
 }
 
-#car_1 {
+#red-car {
   background-image: url(../images/PinkCar.svg);
 }
 
-#car_2 {
+#blue-car {
   background-image: url(../images/BlueCar.svg);
+}
+
+#no-audio {
+  
 }
 
 /* 3. MEDIA QUERIES
  * * * * * * * * * */
 @media screen and (max-height: 1080px) {
-  .mainContainer > header {
+  .main-container > header {
     padding-top: 0.5%;
     font-size: 3em;
   }
-  #gameMainMenu > header {
+  #game-main-menu > header {
     font-size: 10em;
   }
-  .bigButtons button {
+  .big-buttons button {
     width: 150px;
     height: 150px;
   }
-  .miniButtons button {
+  .mini-buttons button {
     margin: 0 5px;
     width: 40px;
     height: 40px;
@@ -240,7 +248,7 @@ button {
     margin-top: 50px;
     font-size: 1.2em;
   }
-  #pauseButton {
+  #pause-button {
     width: 50px;
     height: 50px;
   }
@@ -252,18 +260,18 @@ button {
 }
 
 @media screen and (max-height: 768px) {
-  .mainContainer > header {
+  .main-container > header {
     padding-top: 0.3%;
     font-size: 2em;
   }
-  #gameMainMenu > header {
+  #game-main-menu > header {
     font-size: 6em;
   }
-  .bigButtons button {
+  .big-buttons button {
     width: 85px;
     height: 85px;
   }
-  .miniButtons button {
+  .mini-buttons button {
     margin: 0 2px;
     width: 30px;
     height: 30px;
@@ -272,7 +280,7 @@ button {
     margin-top: 30px;
     font-size: 0.9em;
   }
-  #pauseButton {
+  #pause-button {
     width: 30px;
     height: 30px;
   }
@@ -284,18 +292,18 @@ button {
 }
 
 @media screen and (max-height: 480px) {
-  .mainContainer > header {
+  .main-container > header {
     padding-top: 0.8%;
     font-size: 1em;
   }
-  #gameMainMenu > header {
+  #game-main-menu > header {
     font-size: 4em;
   }
-  .bigButtons button {
+  .big-buttons button {
     width: 55px;
     height: 55px;
   }
-  .miniButtons button {
+  .mini-buttons button {
     margin: 0 2px;
     width: 20px;
     height: 20px;
@@ -304,7 +312,7 @@ button {
     margin-top: 15px;
     font-size: 0.6em;
   }
-  #pauseButton {
+  #pause-button {
     width: 20px;
     height: 20px;
   }
