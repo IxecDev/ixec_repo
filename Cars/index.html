@@ -4,7 +4,7 @@
     <title>2Cars</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/cItter.css">
+    <link rel="stylesheet" href="assets/css/YAHLib.css">
   </head>
   <body>
 
@@ -24,7 +24,7 @@
               </div>
               <div class="mini-buttons margintop">
                 <button class="stats-button" type="button" title="Statistics"></button>
-                <button type="button" id="download-button" title="Download"></button>
+                <button class="download-button" type="button" title="Download"></button>
                 <button type="button" id="bg-sound-button" title="Background Sound"></button>
                 <button type="button" id="fx-sound-button" title="Effects Sound"></button>
               </div>
@@ -37,8 +37,41 @@
           <div id="game-pause-menu">
             <section class="margin50">
               <div class="mini-buttons margintop">
-                <button class="stats-button" type="button" title="Statistics"></button>
+                <button class="home-button" type="button" title="Home"></button>
                 <button type="button" id="resume-button" title="Resume"></button>
+              </div>
+            </section>
+          </div>
+          <div id="game-stats-menu">
+
+          </div>
+          <div id="game-over-menu">
+            <header>
+              <div>GAME OVER</div>
+            </header>
+            <section>
+              <div class="scores-table">
+                <table id="scores-table">
+                  <tbody>
+                    <tr>
+                      <td class="text-left">SCORE</td>
+                      <td class="text-right">0</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">BEST</td>
+                      <td class="text-right">0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="big-buttons">
+                <button type="button" id="reset-button" title="Reset"></button>
+              </div>
+              <div class="mini-buttons margintop">
+                <button class="home-button" type="button" title="Home"></button>
+                <button class="stats-button" type="button" title="Statistics"></button>
+                <button type="button" id="twitter-button" title="Twitter"></button>
+                <button class="download-button" type="button" title="Download"></button>
               </div>
             </section>
           </div>
@@ -60,7 +93,7 @@
     <audio id="tap-audio" src="assets/audio/tap-wooden.mp3"></audio>
 
     <!-- SCRIPT LIST -->
-    <script src="assets/js/jItter.js"></script>
+    <script src="assets/js/YAHLib.js"></script>
 
   </body>
 </html>

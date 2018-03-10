@@ -66,6 +66,13 @@ button {
   margin-top: 40px;
 }
 
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
 .main-container {
   height: 100%;
 }
@@ -105,20 +112,26 @@ button {
   transition: width 2s ease;
 }
 
-#game-main-menu, #game-env, #game-pause-menu {
+#game-main-menu, #game-env, #game-pause-menu,
+#game-stats-menu, #game-over-menu {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-#game-main-menu, #game-pause-menu {
+#game-main-menu, #game-pause-menu, #game-over-menu {
   background: rgba(30, 30, 30, 0.6);
   
   color: #FFF;
   font-family: 'Phenomena';
 }
 
-#game-main-menu {
+#game-over-menu {
+  display: none !important;
+}
+
+#game-main-menu,
+#game-over-menu {
   display: block;
   z-index: 150;
 }
@@ -128,19 +141,22 @@ button {
   z-index: 140;
 }
 
-#game-main-menu > header {
+#game-main-menu > header,
+#game-over-menu > header {
   margin-top: 30%;
   font-family: 'PhenomenaExtraLight';
   text-align: center;
 }
 
 #game-main-menu > section,
-#game-pause-menu > section {
+#game-pause-menu > section,
+#game-over-menu > section {
   text-align: center;
 }
 
 #game-main-menu button,
-#game-pause-menu button {
+#game-pause-menu button,
+#game-over-menu button {
   background: transparent no-repeat center center;
   background-size: contain;
   border: 2px solid #FFF;
@@ -148,12 +164,14 @@ button {
 }
 
 #game-main-menu button:hover,
-#game-pause-menu button:hover {
+#game-pause-menu button:hover,
+#game-over-menu button:hover {
   background-color: rgba(250, 250, 250, 0.1);
 }
 
 #game-main-menu button:active,
-#game-pause-menu button:active {
+#game-pause-menu button:active,
+#game-over-menu button:active {
   background-color: rgba(250, 250, 250, 0.2);
 }
 
@@ -161,11 +179,21 @@ button {
   background-image: url(../images/play.svg) !important;
 }
 
+#reset-button {
+  background-image: url(../images/refresh.png) !important;
+  background-size: 60% !important;
+}
+
+.home-button {
+  background-image: url(../images/home.svg) !important;
+  background-size: 50% !important;
+}
+
 .stats-button {
   background-image: url(../images/stats.png) !important;
 }
 
-#download-button {
+.download-button {
   background-image: url(../images/star.svg) !important;
 }
 
@@ -175,6 +203,10 @@ button {
 
 #fx-sound-button {
   background-image: url(../images/sound-fx.svg) !important;
+}
+
+#twitter-button {
+  background-image: url(../images/twitter.svg) !important;
 }
 
 .credits {
@@ -211,6 +243,8 @@ button {
   background-size: contain;
   bottom: 5%;
   position: absolute;
+
+  transition: left 250ms ease-in-out, right 250ms ease-in-out;
 }
 
 #red-car {
@@ -219,6 +253,47 @@ button {
 
 #blue-car {
   background-image: url(../images/BlueCar.svg);
+}
+
+.particle {
+  background: transparent no-repeat center center;
+  background-size: contain;
+  top: 0;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.particle-pink-circle {
+  background-image: url(../images/PinkCircle.svg);
+}
+.particle-blue-circle {
+  background-image: url(../images/BlueCircle.svg);
+}
+.particle-pink-square {
+  background-image: url(../images/PinkSquare.svg);
+}
+.particle-blue-square {
+  background-image: url(../images/BlueSquare.svg);
+}
+
+.first-path {
+  left: 7%;
+}
+.second-path {
+  left: 33%;
+}
+.third-path {
+  left: 58%;
+}
+.fourth-path {
+  left: 83%;
+}
+
+#scores-table {
+  margin: 0 auto 20px auto;
+  width: 125px;
+  font-family: 'PhenomenaLight';
+  font-size: 2em;
 }
 
 #no-audio {
@@ -234,6 +309,9 @@ button {
   }
   #game-main-menu > header {
     font-size: 10em;
+  }
+  #game-over-menu > header {
+    font-size: 7em;
   }
   .big-buttons button {
     width: 150px;
@@ -267,6 +345,9 @@ button {
   #game-main-menu > header {
     font-size: 6em;
   }
+  #game-over-menu > header {
+    font-size: 4em;
+  }
   .big-buttons button {
     width: 85px;
     height: 85px;
@@ -298,6 +379,9 @@ button {
   }
   #game-main-menu > header {
     font-size: 4em;
+  }
+  #game-over-menu > header {
+    font-size: 2.5em;
   }
   .big-buttons button {
     width: 55px;
