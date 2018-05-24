@@ -5,18 +5,35 @@
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="assets/style/app.css">
+
+        <!-- TEMPLATE STYLES -->
+        <link rel="stylesheet" href="application/templates/home/home.template.css">
+
+        <!-- COMPONENT STYLES -->
+        <link rel="stylesheet" href="application/components/ui-alert/ui-alert.component.css">
     </head>
     <body>
-        <div ng-view></div>
+        <div class="ng-view"></div>
 
-        <div id="loader">
-
-        </div>
+        <ui-alert></ui-alert>
 
         <script src="vendor/angular-1.6.9/angular.min.js" defer></script>
         <script src="vendor/angular-1.6.9/angular-route.min.js" defer></script>
-        <script src="model/app.model.js" defer></script>
-        <script src="controller/home.controller.js" defer></script>
-        <script src="assets/script/app.js" defer></script>
+        <script src="application/app.model.js" defer></script>
+
+        <!-- DIRECTIVES -->
+        
+
+        <!-- SERVICES -->
+        <script src="application/services/users.service.js" defer></script>
+
+        <!-- TEMPLATE CONTROLLERS -->
+        <script src="application/templates/home/home.controller.js" defer></script>
+        <script src="application/templates/help/help.controller.js" defer></script>
+        <script src="application/templates/about/about.controller.js" defer></script>
+
+        <!-- COMPONENT CONTROLLERS -->
+        <script src="application/components/ui-alert/ui-alert.component.js" defer></script>
+
     </body>
 </html>
