@@ -1,24 +1,22 @@
 #include <iostream>
 #include <string.h>
 
+#include "../include/core.h"
 #include "../include/builder.h"
 #include "../include/generator.h"
+#include "../include/manager.h"
 using namespace std;
-
-// Declaration of functions
-void printHelp();
+using namespace Colibri;
 
 
 // Main function
 int main(int argc, char* argv[]) {
 
-  Builder builder;
-  Generator generator;
-  Manager manager;
-
+  Core core;
+  
   // CHECK IF THERE ARE ARGUMENTS
   if (argc == 1) {
-    printHelp();
+    core.printHelp();
     return -1;
   }
 
@@ -26,13 +24,16 @@ int main(int argc, char* argv[]) {
 
   if (strncmp(argv[1], "build", 5) == 0) {
 
+    Builder builder(argv);
     builder.build();
 
   } else if (strncmp(argv[1], "help", 4) == 0) {
 
-    printHelp();
+    core.printHelp();
 
   } else if (strncmp(argv[1], "generate", 9) == 0) {
+
+    Generator generator;
 
     if (strncmp(argv[2], "component", 9) == 0) {
       generator.createComponent(argv[3]);
@@ -41,26 +42,19 @@ int main(int argc, char* argv[]) {
   } else if (strncmp(argv[1], "new", 3) == 0) {
 
     if (argc >= 3) {
+      Manager manager;
       manager.createNewProject(argv[2]);
-    }
+    } else {
+      cout << "You must specify a name of project.\n";
+    }
 
   } else {
 
     cout << "Error: Bad parameter [" << argv[1] << "]\n";
-    printHelp();
+    core.printHelp();
 
   }
 
   return 0;
 
-} 
-
-
-// Definition of functions
-void printHelp() {
-  cout << "\ncolibri:\n\n"
-         << "    build\t\t\t\tBuilds the entire project\n"
-         << "    generate <component|directive|service|template>\n\t\t\t\t\tGenerate the thing you choose\n"
-         << "    help\t\t\t\tShows this help\n"
-         << "    new <project_name>\t\t\tCreate a project with the <project_name> written\n\n";
 }
