@@ -4,15 +4,12 @@
 class Builder {
 
   public:
-    Builder(char* options[]);
+    Builder(int, char**);
 
     void build();
     void setVerbose(bool);
 
   private:
-    static char* directoriesToMove[];
-    static char* directoryTree[];
-
     void generateDirectoryTree();
     void moveVendorDirectoryTree();
 

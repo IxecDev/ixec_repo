@@ -13,6 +13,7 @@ using namespace Colibri;
 int main(int argc, char* argv[]) {
 
   Core core;
+  char response;
   
   // CHECK IF THERE ARE ARGUMENTS
   if (argc == 1) {
@@ -24,8 +25,13 @@ int main(int argc, char* argv[]) {
 
   if (strncmp(argv[1], "build", 5) == 0) {
 
-    Builder builder(argv);
-    builder.build();
+    cout << "Do you really want to build your project (Y/n)? This action will erase current built project if this exists\n> ";
+    cin >> response;
+
+    if (response == 'Y' || response == 'y') {
+      Builder builder(argc, argv);
+      builder.build();
+    }
 
   } else if (strncmp(argv[1], "help", 4) == 0) {
 

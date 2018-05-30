@@ -1,0 +1,6 @@
+General:
+    [-] Integrate POCO libraries to the project
+
+Builder.h Builder.cpp:
+	[-] Create method for moving files
+	[-] Create method for minification of components, controllers, etc
