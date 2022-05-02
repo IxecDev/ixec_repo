@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game of the Snake</title>
+        <meta charset="UTF-8" />
+
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div id="score">0</div>
+
+        <canvas id="c"></canvas>
+
+        <div class="controls">
+        <div id="up">Up</div>
+        <div id="left">Left</div>
+        <div id="right">Right</div>
+        <div id="down">Down</div>
+        </div>
+
+        <div id="game-over-screen">
+            <div id="game-over-message">
+                <div id="game-over-title">
+                Game over
+                </div>
+                <div id="game-over-score">
+                <span id="game-over-score-number">4</span><br>points
+                </div>
+                <div id="game-over-options">
+                <button id="retry-btn">
+                    Retry?
+                </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
